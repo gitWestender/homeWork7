@@ -10,6 +10,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     static void task1() {
@@ -113,8 +114,23 @@ public class Main {
 
         do {
             System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет\n", friday);
-            friday+=week;
+            friday += week;
         }
         while (friday < month);
+    }
+
+    static void task8() {
+        System.out.println("\nЗадание " + counter++ + ":");
+
+        int year = 2023;
+        int beginOfPeriod = year - 200;
+        int endOfPeriod = year + 100;
+        int cometPeriod = 79;
+
+        for (year = beginOfPeriod; year <= endOfPeriod; year++) {
+            if (year % cometPeriod == 0) {
+                System.out.println(year);
+            }
+        }
     }
 }

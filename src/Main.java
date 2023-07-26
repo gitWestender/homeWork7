@@ -9,6 +9,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     static void task1() {
@@ -51,7 +52,7 @@ public class Main {
         int year = 1;
 
         while (year <= 10) {
-            population -= (population*birthRate + population*deathRate);
+            population -= (population * birthRate + population * deathRate);
             System.out.printf("Год %d, численность населения составляет %f\n", year, population);
             year++;
         }
@@ -65,7 +66,7 @@ public class Main {
         int month = 1;
 
         while (money <= 12_000_000) {
-            money += money*percent;
+            money += money * percent;
             System.out.printf("Месяц %d, сумма накоплений равна %f рублей\n", month, money);
             month++;
         }
@@ -79,7 +80,7 @@ public class Main {
         int month = 1;
 
         while (money <= 12_000_000) {
-            money += money*percent;
+            money += money * percent;
             if (month % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %f рублей\n", month, money);
             }
@@ -94,12 +95,26 @@ public class Main {
         float percent = 0.07f;
         int month = 1;
 
-        while (month <= 9*12) {
-            money += money*percent;
+        while (month <= 9 * 12) {
+            money += money * percent;
             if (month % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %f рублей\n", month, money);
             }
             month++;
         }
+    }
+
+    static void task7() {
+        System.out.println("\nЗадание " + counter++ + ":");
+
+        int friday = 1;
+        int week = 7;
+        int month = 31;
+
+        do {
+            System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет\n", friday);
+            friday+=week;
+        }
+        while (friday < month);
     }
 }

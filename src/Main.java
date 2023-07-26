@@ -59,14 +59,12 @@ public class Main {
         System.out.println("\nЗадание " + counter++ + ":");
 
         float money = 15_000f;
-        float sum = 0f;
         float percent = 0.07f;
         int month = 1;
 
-        while (sum < 12_000_000) {
-            money = sum + money + money*percent;
-            sum = money;
-            System.out.printf("Месяц %d, сумма накоплений равна %f рублей\n", month, sum);
+        while (money < 12_000_000) {
+            money += money*percent;
+            System.out.printf("Месяц %d, сумма накоплений равна %f рублей\n", month, money);
             month++;
         }
     }

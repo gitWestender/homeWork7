@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     static void task1() {
@@ -37,5 +38,22 @@ public class Main {
             System.out.print(i + " ");
         }
     }
+
+    static void task3() {
+        System.out.println("\nЗадание " + counter++ + ":");
+
+        float population = 12_000_000f;
+        float birthRate = 17 / 1000f;
+        float deathRate = 8 / 1000f;
+        int year = 1;
+
+        while (year <= 10) {
+            population -= (population*birthRate + population*deathRate);
+            System.out.printf("Год %d, численность населения составляет %f\n", year, population);
+            year++;
+        }
+    }
+
+
 
 }

@@ -6,12 +6,13 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     static void task1() {
         System.out.println("\nЗадание " + counter++ + ":");
 
-        int money = 15000;
+        int money = 15_000;
         int sum = 0;
         int month = 0;
 
@@ -54,6 +55,20 @@ public class Main {
         }
     }
 
+    static void task4() {
+        System.out.println("\nЗадание " + counter++ + ":");
 
+        float money = 15_000f;
+        float sum = 0f;
+        float percent = 0.07f;
+        int month = 1;
+
+        while (sum < 12_000_000) {
+            money = sum + money + money*percent;
+            sum = money;
+            System.out.printf("Месяц %d, сумма накоплений равна %f рублей\n", month, sum);
+            month++;
+        }
+    }
 
 }

@@ -53,7 +53,7 @@ public class Main {
         int year = 1;
 
         while (year <= 10) {
-            population -= (population * birthRate + population * deathRate);
+            population +=  (birthRate + deathRate) * population;
             System.out.printf("Год %d, численность населения составляет %f\n", year, population);
             year++;
         }
